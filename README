@@ -1,11 +1,8 @@
 Nume, prenume: Coman Diana Stefania
 Grupa, seria: 313CA
 
-Data inceperii temei: 25-04-2017
-Data finalizarii temei: 28-04-2017
-
 Probleme intampinate:
-	- Algerea modalitatii de rezolvare a acestei tema a fost cea mai dificila
+	- Alegerea modalitatii de rezolvare a acestei tema a fost cea mai dificila
 	problema de rezolvat deoarece exista multe solutii si a trebuit sa aleg una
 	simpla dar in acelasi timp eficienta si frumoasa
 	- Division by 0: la calcularea winningChance-ului, nu tineam cont daca
