@@ -1,0 +1,48 @@
+Nume, prenume: Coman Diana Stefania
+Grupa, seria: 313CA
+
+Data inceperii temei: 25-04-2017
+Data finalizarii temei: 28-04-2017
+
+Probleme intampinate:
+	- Algerea modalitatii de rezolvare a acestei tema a fost cea mai dificila
+	problema de rezolvat deoarece exista multe solutii si a trebuit sa aleg una
+	simpla dar in acelasi timp eficienta si frumoasa
+	- Division by 0: la calcularea winningChance-ului, nu tineam cont daca
+	best_top_shooter_score sau best_top_explorer_score sunt 0
+	- Dupa ce am aflat ca nu avem voie sa folosim sort din <algorithm>, am
+	implementat un Bubble Sort generic cu functie de compare dar acesta
+	iesea din timp la ultimul test. Pentru a rezolva problema, am implementat
+	Merge Sort ce are complexitate O(n * log(n)) fata de O(n^2) (Bubble Sort)
+
+Algoritmul utilizat:
+	- Pentru a retine datele jucatorilor, am creeat o structura Player ce
+	contine atat scorurile globale cat si date locale fiecarei runde ce
+	sunt folosite ulterior pentru actualizarea celor globale
+	- Jucatorii ii retin intr-un vector cu elemente de tip Player
+	- Ca sa accesez repede informatiile unui jucator si sa le modific in
+	functie de numele lor, am un unordered_map in care cheia este numele
+	jucatorului si valoarea este index-ul jucatorului in vectorul de
+	Players
+	- Distantele dintre senzori le retin intr-o matrice cu 0 pe diagonala
+	principala. Astfel pot obtine in O(1) distanta dintre oricare 2 senzori
+	- Pentru task-ul cu fire exchange, folosesc un graf neorientat cu ajutorul
+	unei matrici de adiacenta in care in loc de 0 sau 1 retin de cate ori are
+	loc un schimb de focuri intre 2 jucatori
+	- Pentru graf folosesc index-urile in unordered_map
+
+	- Pentru a afisa top 5 cu un anumit criteriu, fac o copie la vectorul de
+	jucatori si sortez aceasta copie cu ajutorul unei functii lambda de
+	comparare
+	- La task-ul cu fire exchange, scot din graf perechi de cate 2 jucatori
+	cu valorea din matricea de adacenta si sortez aceste perechi in functie
+	de numarul de impuscaturi schimbate de cei 2
+
+Observatii:
+	- Pentru a nu folosi sort din <algorithm>, am implementat un Merge Sort
+	generic ce primeste un std::function ca functie de comparare
+	- Pentru a creea functiile de comparare, folosesc functii lambda
+
+Complexitatea temei:
+	Tema a fost ok. M-a ajutat sa inteleg mai bine structuri din stl cum ar fi:
+	unordered_map, vector, string si sa ma acomodez cu clasele din c++.
